@@ -55,3 +55,65 @@ const logUserAction = (
 };
 
 logUserAction("Alvee", 25, true);
+
+//object type , type alias, interface
+
+//object type
+
+const user: {
+  name: string;
+  age: number;
+  isActive: boolean;
+  action: () => void;
+  badges: string[];
+} = {
+  name: "Alvee",
+  age: 25,
+  isActive: true,
+  action: () => console.log("hello world"),
+  badges: ["AVS", "aswed"],
+};
+
+//type alias
+
+type User = {
+  name: string;
+  age: number;
+  isActive: boolean;
+  action: () => void;
+  badges: string[];
+};
+
+const user1: User = {
+  name: "Alvee",
+  age: 25,
+  isActive: true,
+  action: () => console.log("hello world"),
+  badges: ["AVS", "aswed"],
+};
+
+const user2: User = {
+  name: "Alvee",
+  age: 25,
+  isActive: true,
+  action: () => console.log("hello world"),
+  badges: ["AVS", "aswed"],
+};
+
+//interface
+
+interface Iuser {
+  name: string;
+  age: number;
+  isActive: boolean;
+  action: () => void;
+  badges: string[];
+}
+
+const user3: Iuser = {
+  name: "Alvee",
+  age: 25,
+  isActive: true,
+  action: () => console.log("hello world"),
+  badges: ["AVS", "aswed"],
+};
