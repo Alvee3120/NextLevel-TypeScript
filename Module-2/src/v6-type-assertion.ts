@@ -9,3 +9,25 @@ const showStatus = (sts: Status) => {
 };
 
 showStatus(someStatus as Status);
+
+// no null assertion
+interface Config {
+  port?: number;
+}
+
+const config: Config = {
+  port: 3000,
+};
+
+// const currentPort: number = config.port!;
+const currentPort: number = config.port as number;
+
+// constant assertion --> make something readonly
+
+const configuration = {
+  port: 8080,
+  preffix: "api/v1",
+} as const;
+
+
+
